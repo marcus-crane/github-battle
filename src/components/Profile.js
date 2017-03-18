@@ -6,6 +6,8 @@ class ProfilePic extends Component {
     }
 }
 
+// const ProfileLink = (props) => { }
+
 class ProfileLink extends Component {
     render() {
         return (

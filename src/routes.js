@@ -1,15 +1,16 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import App from './components/App'
-import NotFound from './components/NotFound'
+import Main from './components/Main'
+import PromptContainer from './containers/PromptContainer'
 
 const Routes = () => {
-    return (
+    return(
         <Router>
             <Switch>
-                <Route path="/" exact component={App} />
-                <Route component={NotFound} />
+                <Route exact path="/" component={Main} />
+                <Route path="/playerOne" header="Player One" component={PromptContainer} />
+                <Route path="/playerTwo/:playerOne" component={PromptContainer} />
             </Switch>
         </Router>
     )
