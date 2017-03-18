@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Profile from './Profile'
 import './App.css';
+
+const USER_DATA = {
+  name: 'Marcus Crane',
+  username: 'marcus-crane',
+  image: 'https://avatars1.githubusercontent.com/u/14816406?v=3&u=d9f92b5bc8c298a4e77b29921e67380531a18b87&s=400'
+}
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+    return <Profile user={USER_DATA} />
   }
 }
 
