@@ -9,8 +9,12 @@ const Routes = () => {
         <Router>
             <Switch>
                 <Route exact path="/" component={Main} />
-                <Route path="/playerOne" header="Player One" component={PromptContainer} />
-                <Route path="/playerTwo/:playerOne" component={PromptContainer} />
+                <Route path="/playerOne" render={() =>
+                    ( <PromptContainer header="Player One" /> )
+                } />
+                <Route path="/playerTwo/:playerOne" render={() =>
+                    ( <PromptContainer header="Player Two" /> )
+                } />
             </Switch>
         </Router>
     )

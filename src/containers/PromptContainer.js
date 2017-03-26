@@ -14,19 +14,21 @@ class PromptContainer extends Component {
     }
 
     onSubmitUser = (e) => {
-        e.preventDefault()
         let username = this.state.username
-        if (!this.props.location.pathname === '/playerOne') {
-            this.context.router.push({
+
+        e.preventDefault()
+        if (this.context.router.route.location.pathname !== '/playerOne') {
+            this.context.router.history.push({
                 pathname: '/battle',
                 query: {
                     playerOne: 'test',
-                    playerTwo: this.state.username
+                    playerTwo: username
                 }
             })
         } else {
-            this.props.history.push({
-                pathname: '/playerTwo'
+            console.log('beh')
+            this.context.router.history.push({
+                pathname: '/playerTwo/' + username
             })
         }
     }
@@ -35,7 +37,7 @@ class PromptContainer extends Component {
         console.log(this)
         return(
             <div className="jumbotron col-sm-6 col-sm-offset-3 text-center" style={styles.transparentBg}>
-                <h1>HEADER</h1>
+                <h1>{this.props.header}</h1>
                 <div className="col-sm-12">
                     <form onSubmit={this.onSubmitUser}>
                         <div className="form-group">
@@ -61,7 +63,7 @@ class PromptContainer extends Component {
     }
 }
 
-PromptContainer.contentTypes = {
+PromptContainer.contextTypes = {
     router: React.PropTypes.object.isRequired
 }
 
