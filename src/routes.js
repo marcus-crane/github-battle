@@ -1,14 +1,14 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Main from './components/Main'
+import Home from './components/Home'
 import PromptContainer from './containers/PromptContainer'
 
 const Routes = () => {
     return(
         <Router>
             <Switch>
-                <Route exact path="/" component={Main} />
+                <Route exact path="/" component={Home} />
                 <Route path="/playerOne" render={() =>
                     ( <PromptContainer header="Player One" /> )
                 } />

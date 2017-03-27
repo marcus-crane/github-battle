@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Profile from './Profile'
-import './App.css';
 
 const USER_DATA = {
   name: 'Marcus Crane',
