@@ -32,7 +32,10 @@ class Prompt extends Component {
 }
 
 Prompt.propTypes = {
-    header: PropTypes.string.isRequired
+    header: PropTypes.string.isRequired,
+    onUpdateUser: PropTypes.func.isRequired,
+    onSubmitUser: PropTypes.func.isRequired,
+    username: PropTypes.string.isRequired
 }
 
 export default Prompt
