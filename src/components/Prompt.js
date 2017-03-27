@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import styles from '../styles/index'
 
 class Prompt extends Component {
@@ -29,6 +29,10 @@ class Prompt extends Component {
             </div>
         )
     }
+}
+
+Prompt.propTypes = {
+    header: PropTypes.string.isRequired
 }
 
 export default Prompt

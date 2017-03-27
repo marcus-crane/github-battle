@@ -30,7 +30,6 @@ class PromptContainer extends Component {
     }
 
     render() {
-        console.log(this)
         return(
             <Prompt
                 onSubmitUser={this.handleSubmitUser}
