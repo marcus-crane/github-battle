@@ -11,11 +11,15 @@ class ConfirmBattleContainer extends Component {
     }
 
     componentDidMount = () => {
-        console.log(this.props.location.query)
+        let query = this.props.location.query
+        // fetch info from github
     }
     render() {
         return (
-            <ConfirmBattle />
+            <ConfirmBattle
+                isLoading={this.state.isLoading}
+                playersInfo={this.state.playerInfo}
+            />
         )
     }
 }
