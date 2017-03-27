@@ -13,14 +13,15 @@ class PromptContainer extends Component {
 
     handleSubmitUser = (e) => {
         let username = this.state.username
+        let playerOne = this.context.router.route.match.params.playerOne
         this.setState({ username: '' })
 
         e.preventDefault()
-        if (this.context.router.route.match.params.playerOne) {
+        if (playerOne) {
             this.context.router.history.push({
                 pathname: '/battle',
                 query: {
-                    playerOne: 'test',
+                    playerOne,
                     playerTwo: username
                 }
             })

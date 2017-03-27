@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './components/Home'
 import PromptContainer from './containers/PromptContainer'
+import ConfirmBattleContainer from './containers/ConfirmBattleContainer'
 
 const Routes = () => {
     return(
@@ -15,6 +16,7 @@ const Routes = () => {
                 <Route path="/playerTwo/:playerOne" render={() =>
                     ( <PromptContainer header="Player Two" /> )
                 } />
+                <Route path="/battle" component={ConfirmBattleContainer} />
             </Switch>
         </Router>
     )
