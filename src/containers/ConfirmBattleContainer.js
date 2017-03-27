@@ -25,7 +25,7 @@ class ConfirmBattleContainer extends Component {
         return (
             <ConfirmBattle
                 isLoading={this.state.isLoading}
-                playersInfo={this.state.playersInfo}
+                playersInfo={this.state.playersInfo || []}
             />
         )
     }
