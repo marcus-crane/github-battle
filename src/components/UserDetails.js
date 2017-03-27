@@ -12,7 +12,7 @@ const UserDetails = (user) => {
             <li className="list-group-item">Followers: {user.info.followers}</li>
             <li className="list-group-item">Following: {user.info.following}</li>
             <li className="list-group-item">Public Repos: {user.info.public_repos}</li>
-            {user.info.blog && <li className="list-group-item">Site: <a href={user.info.blog}>{user.info.blog}</a></li>}
+            {user.info.blog && <li className="list-group-item">URL: <a href={user.info.blog}>{user.info.blog}</a></li>}
         </div>
     )
 }
