@@ -17,7 +17,7 @@ class ConfirmBattleContainer extends Component {
         .then((players) => {
             this.setState({
                 isLoading: false,
-                playersInfo: [players[0], players[1]]
+                playersInfo: [...players]
             })
         })
     }

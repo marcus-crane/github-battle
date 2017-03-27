@@ -5,7 +5,6 @@ import UserDetails from './UserDetails'
 import UserDetailsWrapper from './UserDetailsWrapper'
 
 const ConfirmBattle = (props) => {
-    console.log(props)
     return props.isLoading === true
     ? <p>Loading...</p>
     : <div className="jumbotron col-sm-12 text-center" style={styles.transparentBg}>
