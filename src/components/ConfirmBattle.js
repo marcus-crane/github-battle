@@ -9,6 +9,7 @@ const ConfirmBattle = (props) => {
 
 ConfirmBattle.propTypes = {
     isLoading: PropTypes.bool.isRequired,
+    onInitiateBattle: PropTypes.func.isRequired,
     playersInfo: PropTypes.array.isRequired
 }
 
